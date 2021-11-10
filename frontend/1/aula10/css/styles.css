@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+body {
+    background: #f7f7f7;
+}
+header {
+    padding: 1rem 0.5rem;
+    text-align: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+main h1 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+form {
+ background: #dd0553;
+ padding: 1.2rem;
+ border: none;
+ width: 50%;
+ margin: 0 auto;
+ border-radius: 15px;
+ color: #fff;
+}
+
+form input, form select, form textarea {
+    display: block;
+    margin: 0.3rem 0;
+    width: 100%;
+    border: none;
+    padding: 0.5rem 0.2rem;
+    border-radius: 5px;
+}
+
+form button {
+    border: none;
+    padding: 0.2rem 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0.2rem;
+    font-weight: 500;
+    border-radius: 5px;
+
+}
+
+form button[type="reset"] {
+    background:#f9efa6;
+    color: #222;
+}
+
+form button[type="submit"] {
+    color: #0fbcb8;
+   background: #fff;
+}

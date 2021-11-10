@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Poppins:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background:#617b72;
+    padding: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+.banner {
+    background-image: url('../images/banner1.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+}
+
+.products {
+    display: flex;
+    gap: 1rem;
+    padding: 4rem 1rem;
+}
+
+.products div {
+   border-radius: 25px;padding: 1.25rem;
+   box-shadow:  3px 3px 7px rgba(0, 0, 0, 0.2)
+}
+
+.products div img {
+    width: 280px;
+}
+
+.products h3, .products p, .products a {
+    margin: 0.3rem 0 0 0;
+}
+
+.products a {
+    background: #617b72;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.whatsappLogo {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+}
+

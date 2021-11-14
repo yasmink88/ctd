@@ -42,4 +42,4 @@ console.log(amigos[1][0]) // Spiderman
 
 let str = "una string qualquer"
 let grupoDeAmigos = [ [45, 89, 0], ["Digital", "House", true], ["string", "123","false", 54, true, str] ]
-console.log(grupoDeAmigos[2][grupoDeAmigos[2].length - 1]) //5
+console.log(grupoDeAmigos[2][grupoDeAmigos[2].length - 1]) // str

@@ -43,3 +43,62 @@ console.log(amigos[1][0]) // Spiderman
 let str = "una string qualquer"
 let grupoDeAmigos = [ [45, 89, 0], ["Digital", "House", true], ["string", "123","false", 54, true, str] ]
 console.log(grupoDeAmigos[2][grupoDeAmigos[2].length - 1]) // str
+
+function printReverse(array) {
+ console.log(array.reverse());
+}
+
+printReverse(numbers);
+
+function arrayReverse(array) {
+    let newArray = array.reverse();
+    return newArray;
+}
+
+console.log(arrayReverse(numbers))
+
+function addArray(array) {
+    let total = 0
+
+    for (let i = 0; i < array.length; i++) {
+
+        total += array[i]
+    }
+
+    return total
+}
+
+console.log(addArray(numbers))
+
+function arrayJoin(array) {
+    return array.join("")
+}
+
+console.log(arrayJoin(numbers))
+
+let filmes = ["stars wars", "matrix", "mr. robot", "o preço do amanhã", "a vida é bela"]
+
+function uppercaseArray(array) {
+   
+    let newArray = []
+    for (let i = 0; i < array.length; i++) {
+        newArray.push(array[i].toUpperCase())
+        
+    }
+return newArray
+}
+
+console.log(uppercaseArray(filmes))
+
+let animations = ["Toy Story", "Procurando Nemo", "Kung-fu Panda", "Wally", "Fortnite"]
+
+function joinArrays(array1, array2) {
+    let deletedItem = array2.pop();
+ for (let i = 0; i < array2.length; i++) {
+     array1.push(array2[i])
+ }
+
+ return array1;
+}
+
+console.log(joinArrays(filmes, animations))

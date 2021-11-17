@@ -102,3 +102,14 @@ function joinArrays(array1, array2) {
 }
 
 console.log(joinArrays(filmes, animations))
+
+const asiaScores = [8, 10, 6, 9, 10, 6, 6, 8, 4]
+const europeScores = [8, 10, 6, 8, 10, 6, 7, 9, 5]
+
+function compareRatings(asia, europe) {
+    for (i = 0; i < asia.length; i++) {
+        console.log(asia[i] === europe[i])
+    }
+}
+
+compareRatings(asiaScores, europeScores)

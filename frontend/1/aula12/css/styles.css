@@ -1,130 +1,173 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Poppins:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Poppins:wght@300;400&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Poppins;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+::selection {
+  background-color: #000;
+  color: #fff;
 }
 
 nav {
-    position: fixed;
-    width: 100%;
-    background:#617b72;
-    padding: 1rem;
+  position: fixed;
+  width: 100%;
+  background: #617b72;
+  padding: 1rem;
 }
 
 nav a {
-    text-decoration: none;
-    color: #fff;
-    padding: 0 0.5rem;
-    transition: 0.4s;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem 0;
+  display: inline-block;
+  position: relative;
+  margin: 0 0.5rem;
 }
 
-nav a:hover {
- border-bottom: 3px solid #fff;
- padding-bottom: 0.25rem;
+nav a::after {
+  content: "";
+  background: #fff;
+  content: " ";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  background-color: rgb(36, 36, 36);
+  width: 0;
+  height: 3px;
+  transition: all 300ms ease-out;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 .banner {
-    background-image: url('../images/banner1.jpg');
-    background-size: cover;
-    width: 100%;
-    height: 600px;
+  background-image: url("../images/banner1.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 600px;
 }
 
 h2 {
-    text-align: center;
-    margin: 1rem 0;
+  text-align: center;
+  margin: 1rem 0;
 }
 
 .products {
-    display: flex;
-    gap: 1rem;
-    padding: 2rem 1rem;
+  display: flex;
+  gap: 1rem;
+  padding: 2rem 1rem;
 }
 
 .products div {
-   border-radius: 25px;padding: 1.25rem;
-   box-shadow:  3px 3px 7px rgba(0, 0, 0, 0.2)
+  border-radius: 25px;
+  padding: 1.25rem;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
 }
 
 .products div:nth-child(even) {
-    background: #f7f7f7;
+  background: #f7f7f7;
 }
 
 .products div img {
-    width: 280px;
+  width: 280px;
 }
 
-.products h3, .products p, .products a {
-    margin: 0.3rem 0 0 0;
+.products h3,
+.products p,
+.products a {
+  margin: 0.3rem 0 0 0;
 }
 
 .products p::first-letter {
-    color:#617b72;
-    font-weight: 700;
-    text-decoration: underline;
+  color: #617b72;
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .products a {
-    background: #617b72;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 25px;
-    text-decoration: none;
-    display: inline-block;
+  background: #617b72;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .whatsappLogo {
-    width: 50px;
-    height: 50px;
-    position: fixed;
-    right: 1rem;
-    bottom: 1rem;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
 }
 
 form {
-    background: #dd0553;
-    padding: 1.2rem;
-    border: none;
-    width: 90%;
-    margin: 0 auto;
-    border-radius: 15px;
-    color: #fff;
-   }
-   
-   form input, form select, form textarea {
-       display: block;
-       margin: 0.3rem 0;
-       width: 100%;
-       border: none;
-       padding: 0.5rem 0.2rem;
-       border-radius: 5px;
-   }
-   
-   form input:focus {
-       background: #e4e4e4;
-       outline: 0;
-   }
+  background: #617b72;
+  padding: 1.2rem;
+  border: none;
+  width: 90%;
+  margin: 2rem auto;
+  border-radius: 15px;
+  color: #fff;
+}
 
-   form button {
-       border: none;
-       padding: 0.2rem 0.5rem;
-       margin-top: 0.5rem;
-       margin-right: 0.2rem;
-       font-weight: 500;
-       border-radius: 5px;
-   
-   }
-   
-   form button[type="reset"] {
-       background:#f9efa6;
-       color: #222;
-   }
-   
-   form button[type="submit"] {
-       color: #0fbcb8;
-      background: #fff;
-   }
+form input:not([type="checkbox"]),
+form select,
+form textarea {
+  display: block;
+  margin: 0.3rem 0;
+  width: 100%;
+  border: none;
+  padding: 0.5rem 0.2rem;
+  border-radius: 5px;
+}
+
+form input[type="checkbox"]:checked {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+form input:focus {
+  background: #e4e4e4;
+  outline: 0;
+}
+
+form button {
+  border: none;
+  padding: 0.2rem 0.5rem;
+  margin-top: 0.5rem;
+  margin-right: 0.2rem;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+form button:hover {
+  cursor: pointer;
+}
+
+form button[type="reset"] {
+  background: #f9efa6;
+  color: #222;
+}
+form button[type="reset"]:disabled {
+  background: #f7f7f7;
+  color: #4e4e4e;
+  cursor: not-allowed;
+}
+
+form button[type="submit"]:enabled {
+  color: #fff;
+  background: #25302c;
+}
+form button[type="submit"]:hover {
+  color: #fff;
+  background: #71b19a;
+}

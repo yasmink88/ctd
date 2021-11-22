@@ -9,33 +9,66 @@
 </head>
 <body>
     <header>
-        <img src="images/workit_logo.png" alt="" class="logo">
+        <img src="images/sweet_bite.png" alt="" class="logo">
     </header>
 
     <main>
-        <h1>Entre em Contato</h1>
+        <h1>Monte seu cupcake</h1>
         <form action="">
-            <div>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name">
-        </div>
-            <div>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email">
-        </div>
-        <div>
-        <label for="city">City</label>
-       <select name="city" id="city">
-           <option value="">Select city</option>
-           <option value="São Paulo">São Paulo</option>
-           <option value="Rio de Janiero">Rio de Janeiro</option>
-       </select>
-    </div>
-            <div>
-            <label for="message">Message</label>
-            <textarea name="message" id="message" ></textarea>
-        </div>
-           
+
+            <fieldset class="tipo-massa">
+                <legend>Escolha sua massa</legend>
+
+                <input type="radio" name="tipo-massa" id="chocolate" value="Chocolate">
+                <label for="chocolate">Chocolate</label>
+
+                <input type="radio" name="tipo-massa" id="baunilha" value="Baunilha">
+                <label for="baunilha">Baunilha</label>
+
+                <input type="radio" name="tipo-massa" id="red_velvet" value="Red velvet">
+                <label for="red_velvet">Red Velvet</label>
+
+            </fieldset>
+            <fieldset class="cobertura">
+                <legend>Escolha sua cobertura</legend>
+
+                <input type="radio" name="cobertura" id="chocolate" value="Chocolate">
+                <label for="chocolate">Chocolate</label>
+
+                <input type="radio" name="cobertura" id="baunilha" value="Baunilha">
+                <label for="baunilha">Baunilha</label>
+
+                <input type="radio" name="cobertura" id="cream_cheese" value="Cream Cheese">
+                <label for="cream_cheese">Cream Cheese</label>
+
+            </fieldset>
+            <fieldset class="extras">
+                <legend>Extras</legend>
+
+                <input type="checkbox" name="extras" id="chocolate_granulado" value="Chocolate Granulado">
+                <label for="chocolate_granulado">Chocolate Granulado</label>
+
+                <input type="checkbox" name="extras" id="granulado_colorido" value="Granulado Colorido">
+                <label for="baunilha">Granulado Colorido</label>
+
+                <input type="checkbox" name="extras" id="acucar" value="Açucar">
+                <label for="red_velvet">Açucar</label>
+            </fieldset>
+
+            <fieldset class="contato">
+                <legend>Contato</legend>
+
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                    <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div>
+            </fieldset>
+
         <div>
             <button type="submit">Submit</button>
            <button type="reset">Reset</button>

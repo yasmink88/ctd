@@ -1,0 +1,31 @@
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: chocolate;
+    animation: ball 2s ease-in-out infinite;
+
+    
+}
+
+@keyframes ball {
+    0% {
+        opacity: 0;
+       
+    }
+
+   50% {
+        transform: translateX(200px);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+}
+
+.snowman {
+    font-size: 100px;
+    transition: all .5s;
+}

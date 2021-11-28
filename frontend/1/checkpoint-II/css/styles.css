@@ -6,13 +6,14 @@
     box-sizing: border-box;
 }
 
-
-
 body {
     background-image: url('../images/background-pyramids.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -53,6 +54,10 @@ main {
     padding: 1.25rem;
 }
 
+main .video iframe {
+    width: 100%;
+}
+
 main .intro, main .curiosities {
     width: 65%;
     margin: 0 auto;
@@ -66,8 +71,64 @@ main .intro, main .curiosities {
 
 }
 
+form {
+    background-color: rgba(0,0,0,0.3);
+    padding: 2rem 0;
+    border-radius: 20px;
+  
+}
+
+form div {
+    margin: 1rem 0;
+}
+
+form #name, form #email, form #birthdate, form #city {
+    display: block;
+    margin: 0.5rem auto;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    width: 40%;
+    transition: width 0.5s;
+    outline: 0;
+}
+
+form #name:hover, form #email:hover, form #birthdate:hover {
+    width: 60%;
+}
+
+form .checkbox_btns input:not(:first-child) {
+    margin-left: 1rem;
+    vertical-align: middle;
+} 
+
+form button[type="submit"], form button[type="reset"] {
+    background: #fff;
+    color: #222;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 2rem;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin: 0.5rem 0.8rem;
+}
+
+form button[type="reset"] {
+    background: rgb(221, 7, 7);
+    color: #fff;
+}
+
+form button[type="submit"]:hover {
+    background-color: rgb(19, 167, 51);
+    color: #fff;
+}
+
+form button[type="reset"]:hover {
+    background: rgb(167, 5, 5)
+}
 footer {
     text-align: center;
+    margin-top: auto;
 }
 
 footer img {

@@ -41,11 +41,42 @@
             <input type="email" name="email" id="email" placeholder="Email" />
           </div>
           <div>
-              <label for="birthdate">birthdate</label>
+              <label for="birthdate">Birthdate</label>
               <input type="date" name="birthdate" id="birthdate">
           </div>
+          <div>
+            <p>Are you older than 18?</p>
+            <input type="radio" name="maior-18" id="maior-18">
+            <label for="maior-18"> &#62; 18 </label>
+            <input type="radio" name="menor-18" id="menor-18">
+            <label for="menor-18"> &#60; 18 </label>
+          </div>
+
+          <div>
+            <p>Choose a city to visit:</p>
+            <select name="city" id="city">
+              <option value="Cairo">Cairo</option>
+              <option value="Alexandria">Alexandria</option>
+              <option value="Aswan">Aswan</option>
+            </select>
+          </div>
+
+          <div>
+            <p>Are you ..?</p>
+            <div class="checkbox_btns">
+            <input type="checkbox" name="tourist" id="tourist">
+            <label for="tourist">Tourist</label>
+            <input type="checkbox" name="resident" id="resident">
+            <label for="resident">Resident</label>
+            <input type="checkbox" name="student" id="student">
+            <label for="student">Student</label>
+          </div>
+          </div>
+
+          <button type="submit">Send</button>
+          <button type="reset">Reset</button>
         </form>
-      </section>
+      </section> 
     </main>
     <footer>
       <a href="https://www.instagram.com/everydaycairo">
@@ -55,7 +86,7 @@
         <img src="images/vimeo.png" alt="Vimeo"
       /></a>
 
-      <p>Copyright 2021</p>
+      <p>Copyright &copy; 2021</p>
     </footer>
   </body>
 </html>

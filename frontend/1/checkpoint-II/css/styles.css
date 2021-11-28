@@ -82,6 +82,14 @@ form div {
     margin: 1rem 0;
 }
 
+
+form .radio_btns input {
+    margin-top: 0.8rem;
+}
+form input[type="radio"]:not(:first-child) {
+    margin-left: 0.8rem;
+}
+
 form #name, form #email, form #birthdate, form #city {
     display: block;
     margin: 0.5rem auto;

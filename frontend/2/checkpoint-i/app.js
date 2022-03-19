@@ -8,7 +8,12 @@ function executar() {
     let formPais = document.getElementById('pais').value
     let formDescricao = document.getElementById('descricao').value
 
-    //insert info into card
+    //adding from values to cards
+    let newContent = `
+    <img src="${formUrl}" alt="">
+    <h2>${formPais}</h2>
+    <p>${formDescricao}</p>`
+
 }
 
 botaoEnviar.addEventListener("click", (evento) => {

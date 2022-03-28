@@ -8,7 +8,7 @@
     <title>Aula 5 - Modificar elementos com JS</title>
   </head>
 
-  <body class="dark">
+  <body>
     <div class="header">
       
       <h1>A família dos felinos</h1>
@@ -88,8 +88,25 @@
   </body>
 
   <script>
+      let body = document.querySelector("body");
+      let btn = document.querySelector(".btn_dark")
+
+      if(body.classList.contains('dark')) {
+        btn.innerText = "Light Theme"
+      } else {
+        btn.innerText = "Dark Theme"
+      }
+
     function activateDark() {
-      document.querySelector("body").classList.toggle("dark");
+     
+      if(body.classList.contains('dark')) {
+
+        btn.innerText = "Dark Theme"
+        body.classList.remove('dark')
+      } else {
+        btn.innerText = "Light Theme"
+        body.classList.add('dark')
+      }
     }
   </script>
   

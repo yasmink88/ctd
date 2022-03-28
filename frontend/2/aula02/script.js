@@ -7,12 +7,12 @@ let userScore = 0;
 let computerScore = 0;
 
 
-
 function startGame() {
   player1 = prompt("Rock, Paper or Scissors?");
   player2 = choices[Math.floor(Math.random(choices) * choices.length)];
   
   alert(`You chose ${player1} and the computer chose ${player2}`);
+
 
   if (player1 == player2) {
     alert("That's a tie! No points scored!");
@@ -24,29 +24,30 @@ function startGame() {
     (player1 == "Scissors" && player2 == "Paper")
   ) {
     userScore++;
-    alert(`You won this round! Your score is: ${userScore}`);
+    alert(`You won this round! Your score: ${userScore}, Computer score: ${computerScore}`);
   } else if (
     (player2 == "Paper" && player1 == "Rock") ||
     (player2 == "Rock" && player1 == "Scissors") ||
     (player2 == "Scissors" && player1 == "Paper")
   ) {
     computerScore++;
-    alert(`You lost this round! Computer score is: ${computerScore}`);
+    alert(`You lost this round! Your score: ${userScore}, Computer score: ${computerScore}`);
   }
 
   gameScore()
   
 }
 
+
 function gameScore() {
-    if (userScore < 2 || computerScore < 2) {
-        alert("Next round!");
-    }
-    else if (userScore == 2) {
-        alert("You win!");
+    if (userScore == 2) {
+        alert("Game over! You win!");
 
       } else if (computerScore == 2) {
-        alert("Computer wins!");
+        alert("Game over! Computer wins!");
+      } else {
+        alert("Next round!");
+        startGame()
       }
 }
 

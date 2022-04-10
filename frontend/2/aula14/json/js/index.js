@@ -13,6 +13,12 @@ const jsonData = `
       "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
     },
     {
+      "name": "Fire woman",
+      "age": 23,
+      "secretIdentity": "Jessica Parker",
+      "powers": ["Fire Creation", "Controlling fire"]
+    },
+    {
       "name": "Madame Uppercut",
       "age": 39,
       "secretIdentity": "Jane Wilson",
@@ -37,15 +43,18 @@ const jsonData = `
   ]
 }
 `;
+const addBtn = document.querySelector("form button");
+let membrosArray = [];
+let membrosList = document.querySelector("#membros");
+let membrosInput = document.querySelector("#superhero");
 
 //Percorra o JSON e insera os nomes dos membros na lista html
 function percorrerMembros() {
   //escreva a lógica
-  let jsonTojs = JSON.parse(jsonData)
-  let membros = jsonTojs.members
-  let membrosList = document.querySelector("#membros")
+  let jsonTojs = JSON.parse(jsonData);
+  let membros = jsonTojs.members;
 
-/* 
+  /* 
   for (const membro of membros) {
     console.log(membro.name)
     membrosList.innerHTML += `
@@ -54,14 +63,46 @@ function percorrerMembros() {
     `
     
   } */
-  membros.forEach(membro => {
+  membros.forEach((membro) => {
+    membrosArray.push(membro.name);
 
     membrosList.innerHTML += `
       <li>${membro.name}</li>
-    
-    `
-     console.log(membro.name)
+    `;
   });
-
 }
-percorrerMembros();
+
+let heroes = localStorage.getItem("superheroes")
+
+window.onload = () => {
+  percorrerMembros()
+  heroes.forEach(hero => {
+    membrosList.innerHTML += `
+    <li>${hero}</li>
+  
+  `
+  });
+}
+
+heroes = heroes ? heroes.split(",") : []
+
+addBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  let superhero = membrosInput.value;
+
+  if(heroes.includes(superhero)) {
+    alert("Superhero already exists")
+  } else {
+
+    heroes.push(superhero)
+    localStorage.setItem("superheroes", heroes.toString())
+
+    membrosList.innerHTML += `
+    <li>${superhero}</li>
+  
+  `
+   
+    console.log(heroes)
+  }
+});

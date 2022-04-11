@@ -54,6 +54,6 @@ if (localStorage.user != null) {
 function logout() {
   
     localStorage.removeItem('user')
-    document.location.reload()
+    location.reload()
 
 }

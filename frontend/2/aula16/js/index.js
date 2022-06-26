@@ -79,9 +79,7 @@ consultandoBaseDeDados
     .then((resposta) => {
         renderizarDadosUsuario(resposta)
 
-    }).then(
-       
-    ).catch((err) => {
+    }).catch((err) => {
         console.log(err);
     });
 

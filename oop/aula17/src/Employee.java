@@ -3,22 +3,14 @@ public class Employee {
     private String lastName;
     private int age;
     private String rg;
-    private boolean registeredMT;
 
-    public Employee(String firstName, String lastName, int age, String rg, boolean registeredMT) {
+
+    public Employee(String firstName, String lastName, int age, String rg) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.rg = rg;
-        this.registeredMT = registeredMT;
-    }
 
-    public boolean isRegisteredMT() {
-        return registeredMT;
-    }
-
-    public void setRegisteredMT(boolean registeredMT) {
-        this.registeredMT = registeredMT;
     }
 
     public String getFirstName() {
@@ -60,7 +52,6 @@ public class Employee {
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
                 ", rg='" + rg + '\'' +
-                ", registeredMT=" + registeredMT +
                 '}';
     }
 }

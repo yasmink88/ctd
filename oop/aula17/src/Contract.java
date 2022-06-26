@@ -4,11 +4,13 @@ public abstract class Contract implements Comparable<Contract> {
     private int contractDuration;
     private LocalDate startDate;
     private Employee employee;
+    private boolean registeredMT;
 
-    public Contract(int contractDuration, String startDate, Employee employee) {
+    public Contract(int contractDuration, String startDate, Employee employee, boolean registeredMT) {
         this.contractDuration = contractDuration;
         this.startDate = LocalDate.parse(startDate);
         this.employee = employee;
+        this.registeredMT = registeredMT;
     }
 
     public int getContractDuration() {
@@ -35,6 +37,14 @@ public abstract class Contract implements Comparable<Contract> {
         this.employee = employee;
     }
 
+    public boolean isRegisteredMT() {
+        return registeredMT;
+    }
+
+    public void setRegisteredMT(boolean registeredMT) {
+        this.registeredMT = registeredMT;
+    }
+
     @Override
     public int compareTo(Contract o) {
         if(this.getContractDuration() > o.getContractDuration()) return 1;
@@ -42,11 +52,12 @@ public abstract class Contract implements Comparable<Contract> {
         return 0;
     }
 
-    public boolean apto(Employee getEmployee) {
-        if(this.getEmployee().isRegisteredMT() == true) {
-            return true;
+    public void EmployeeRegistered() throws ExceptionEmployee {
+        if (this.registeredMT == false) {
+            throw new ExceptionEmployee();
         } else {
-            return false;
+            System.out.println("Employee Registered");
         }
     }
+
 }

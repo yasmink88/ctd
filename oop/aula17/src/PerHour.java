@@ -4,8 +4,8 @@ public class PerHour extends Contract {
  private int hours;
  private double hourPrice;
 
-    public PerHour(int contractDuration, String startDate, Employee employee, int hours, double hourPrice) {
-        super(contractDuration, startDate, employee);
+    public PerHour(int contractDuration, String startDate, Employee employee, boolean registeredMT, int hours, double hourPrice) {
+        super(contractDuration, startDate, employee, registeredMT);
         this.hours = hours;
         this.hourPrice = hourPrice;
     }
@@ -31,6 +31,7 @@ public class PerHour extends Contract {
         return "PerHour{" +
                 "hours=" + hours +
                 ", hourPrice=" + hourPrice +
+                ", employee=" + getEmployee().getFirstName() +
                 '}';
     }
 }

@@ -5,8 +5,8 @@ public class PerMonth extends Contract {
     private int totalHours;
     private String position;
 
-    public PerMonth(int contractDuration, String startDate, Employee employee, double monthlySalary, int totalHours, String position) {
-        super(contractDuration, startDate, employee);
+    public PerMonth(int contractDuration, String startDate, Employee employee, boolean registeredMT, double monthlySalary, int totalHours, String position) {
+        super(contractDuration, startDate, employee, registeredMT);
         this.monthlySalary = monthlySalary;
         this.totalHours = totalHours;
         this.position = position;
@@ -43,5 +43,11 @@ public class PerMonth extends Contract {
                 ", totalHours=" + totalHours +
                 ", position='" + position + '\'' +
                 '}';
+    }
+
+    public void isBoss() {
+        if (this.position.equals("Boss")) {
+            System.out.println("This person is a boss");
+        }
     }
 }
